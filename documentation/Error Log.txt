@@ -1,0 +1,18 @@
+09/08/2018
+
+1. Initial placment of mines did not result in the correct number being placed. The necessary solution was to use a while loop to check against a set maximum number of mines.
+
+2. Attempting to add 1 to the text count in a cell using (cell.textContent += 1) resulted in going from 1 to 11. This was remedied by using textContent++
+
+3. When checking the number of mines each cell touches, going cell by cell did not work. Cells that were on the next line, and therefore not touching a mine were getting counted. Attempting to solve the issue by searching row by row.
+
+4. Cells with mines in them were being given a count. Fixed by running a loop after the count was done to remove text from any mine cells.
+
+5. Using a for of loop to go row by row did not allow for checking above and below the current row. Changed to a standard for loop.
+
+6. Ran into an issue where cell counts were not being reset to zero. Added a reset loop at the start of the new game function.
+
+7. Clicking on an empty cell should show all connected empty cells and the immediately border numbered cells. Currently, only the empty cells show.
+
+09/10/2018
+1. Checking tiles row by row is causing the game to reveal mines in lower levels. Attempting to check adjoining cells.

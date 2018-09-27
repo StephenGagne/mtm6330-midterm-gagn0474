@@ -1,0 +1,33 @@
+.gameContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.row{
+    display: flex;
+}
+
+.col{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-color: #ccc;
+    border: 1px solid black;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.mine{
+    background-color: #555;
+}
+
+.covered {
+    background-color: #aaa;
+    color: #aaa;
+}
+
+.exploded {
+background-color: #f00;
+}
