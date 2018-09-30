@@ -1,0 +1,30 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.06 56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c8b299;
+      }
+
+      .cls-2 {
+        fill: #998776;
+      }
+
+      .cls-3 {
+        fill: #c72026;
+      }
+
+      .cls-4 {
+        fill: #ed1c24;
+      }
+    </style>
+  </defs>
+  <title>flag</title>
+  <g>
+    <path class="cls-1" d="M30.39,54.32v2.93h-.55c-15.53,0-28.12-1.73-28.12-3.87,0-2,10.86-3.62,24.85-3.84-8,.23-14,1.2-14,2.37,0,1.33,7.87,2.41,17.58,2.41Z" transform="translate(-1.72 -1.25)"/>
+    <path class="cls-2" d="M58,53.38c0,2.11-12.3,3.83-27.58,3.87V54.32c9.58,0,17.3-1.09,17.3-2.41,0-1.14-5.71-2.09-13.41-2.35C47.7,49.85,58,51.45,58,53.38Z" transform="translate(-1.72 -1.25)"/>
+    <rect class="cls-2" x="28.66" width="1.62" height="50.47"/>
+    <rect class="cls-1" x="27.04" width="1.62" height="50.47"/>
+    <polygon class="cls-3" points="57.06 9.03 56.79 29.77 32.34 0.88 57.06 9.03"/>
+    <polygon class="cls-4" points="56.79 29.77 56.79 29.84 31.91 22.47 32.04 0.78 32.34 0.88 56.79 29.77"/>
+  </g>
+</svg>

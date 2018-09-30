@@ -1,0 +1,35 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.17 57.17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c630;
+      }
+
+      .cls-2 {
+        fill: #f6eb16;
+      }
+
+      .cls-3 {
+        fill: #4e4e4e;
+      }
+
+      .cls-4 {
+        fill: #1a1a1a;
+      }
+
+      .cls-5 {
+        fill: none;
+        stroke: #010101;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>neutral-face</title>
+  <g>
+    <path class="cls-1" d="M30.86,1.85V59a28.58,28.58,0,0,0,0-57.14Zm9.92,26.82A5.25,5.25,0,1,1,46,23.42,5.24,5.24,0,0,1,40.78,28.67Z" transform="translate(-1.7 -1.83)"/>
+    <path class="cls-2" d="M30.28,1.83a28.59,28.59,0,0,0,0,57.17h.58V1.85A5.62,5.62,0,0,0,30.28,1.83ZM21,28.67a5.25,5.25,0,1,1,5.25-5.25A5.24,5.24,0,0,1,21,28.67Z" transform="translate(-1.7 -1.83)"/>
+    <circle class="cls-3" cx="19.25" cy="21.58" r="5.25"/>
+    <circle class="cls-4" cx="39.08" cy="21.58" r="5.25"/>
+    <path class="cls-5" d="M18,42.67c12.25,9.91,26.83,0,26.83,0" transform="translate(-1.7 -1.83)"/>
+  </g>
+</svg>

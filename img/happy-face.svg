@@ -1,0 +1,32 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c630;
+      }
+
+      .cls-2 {
+        fill: #f6eb16;
+      }
+
+      .cls-3 {
+        fill: #4e4e4e;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #010101;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>happy-face</title>
+  <path class="cls-1" d="M58.17,30A28.49,28.49,0,0,1,30.25,58.49v-57A28.49,28.49,0,0,1,58.17,30Z" transform="translate(-1.17 -1.5)"/>
+  <path class="cls-2" d="M30.25,1.51v57h-.58a28.5,28.5,0,0,1,0-57Z" transform="translate(-1.17 -1.5)"/>
+  <path class="cls-3" d="M25.59,28.4c-6.38-7.71-17.2-2.08-17.19-2.2a5.44,5.44,0,0,1,0-.57,8.8,8.8,0,1,1,17.46,2.2c0,.24-.09.48-.14.72" transform="translate(-1.17 -1.5)"/>
+  <path class="cls-4" d="M43.46,43.26h0" transform="translate(-1.17 -1.5)"/>
+  <path class="cls-4" d="M18.13,43.4" transform="translate(-1.17 -1.5)"/>
+  <path class="cls-3" d="M52.21,39.36c-.47.56-23.12,27.07-42.46,0C28.94,54.88,51.73,39.68,52.21,39.36Z" transform="translate(-1.17 -1.5)"/>
+  <path class="cls-4" d="M43.46,43.26h0" transform="translate(-1.17 -1.5)"/>
+  <path class="cls-3" d="M34.75,28.4C41.14,20.69,52,26.32,52,26.2s0-.38,0-.57a8.8,8.8,0,1,0-17.46,2.2c0,.24.09.48.14.72" transform="translate(-1.17 -1.5)"/>
+</svg>

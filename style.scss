@@ -1,0 +1,41 @@
+$mine: #b31f24;
+$inactiveCell: #f7f2ec;
+$activeCell: #eaddce;
+$backgroundColour: #f9f4ee;
+
+//numbers
+$one: #1072ba;
+$two: #078a7e;
+$three: #fdb71e;
+$four: #f26739;
+$five: #ee2d2e;
+$six: #943b96;
+
+.gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-color: $inactiveCell;
+  border: 1px solid $backgroundColour;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.covered {
+  background-color: $activeCell;
+  color: $activeCell;
+}
+
+.exploded {
+  background-color: $mine;
+}

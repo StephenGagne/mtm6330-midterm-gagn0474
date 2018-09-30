@@ -1,3 +1,30 @@
+.gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
+.row {
+  display: flex;
+}
+
+.col {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-color: #f7f2ec;
+  border: 1px solid #eee;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.covered {
+  background-color: #eaddce;
+  color: #eaddce;
+}
+
+.exploded {
+  background-color: #b31f24;
+}
 
 /*# sourceMappingURL=style.css.map */

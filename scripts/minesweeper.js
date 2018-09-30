@@ -8,7 +8,7 @@ const game = {
     level: 1,
     numOfRows: 10,
     numOfMines: 0,
-    maxNumOfMines: 25
+    maxNumOfMines: 10
 }
 
 function newGame() {

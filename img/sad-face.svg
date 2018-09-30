@@ -1,0 +1,31 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.75 56.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c5c630;
+      }
+
+      .cls-2 {
+        fill: #f6eb16;
+      }
+
+      .cls-3 {
+        fill: #4e4e4e;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #010101;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <title>sad-face</title>
+  <g>
+    <path class="cls-1" d="M57.91,30.13a28.37,28.37,0,0,1-27.8,28.36V1.76A28.37,28.37,0,0,1,57.91,30.13Z" transform="translate(-1.16 -1.75)"/>
+    <path class="cls-2" d="M30.11,1.76V58.49h-.57a28.38,28.38,0,1,1,0-56.75Z" transform="translate(-1.16 -1.75)"/>
+    <path class="cls-3" d="M23.41,20.53A5.21,5.21,0,0,1,13.59,24c-.05-.14-.09-.28-.13-.42s-.05-.23-.07-.36l9.69-3.45.12.23A4.4,4.4,0,0,1,23.41,20.53Z" transform="translate(-1.16 -1.75)"/>
+    <path class="cls-3" d="M36.39,20.53A5.21,5.21,0,0,0,46.21,24c0-.14.09-.28.13-.42s0-.23.07-.36L36.72,19.8,36.6,20C36.53,20.19,36.45,20.36,36.39,20.53Z" transform="translate(-1.16 -1.75)"/>
+    <line class="cls-4" x1="15.02" y1="39.73" x2="43.91" y2="39.73"/>
+  </g>
+</svg>
