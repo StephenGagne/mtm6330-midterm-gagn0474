@@ -1,4 +1,5 @@
 $mine: #b31f24;
+$darkBlue: #233b74;
 $inactiveCell: #f7f2ec;
 $activeCell: #eaddce;
 $backgroundColour: #f9f4ee;
@@ -11,10 +12,48 @@ $four: #f26739;
 $five: #ee2d2e;
 $six: #943b96;
 
+@import "./fonts/stylesheet.css";
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $darkBlue;
+  margin-bottom: 2%;
+}
+
+.logo {
+  flex-basis: 15%;
+  display: flex;
+  margin-left: 2.5%;
+}
+
+.logo img {
+  display: block;
+  max-height: 70px;
+}
+
+.logline {
+  flex-basis: 60%;
+  font-family: 'bignoodletitlingregular';
+  font-size: 3.5rem;
+  color: $activeCell;
+  margin: 0 2%;
+  align-self: flex-end;
+}
+
 .gameContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
@@ -27,8 +66,34 @@ $six: #943b96;
   cursor: pointer;
   background-color: $inactiveCell;
   border: 1px solid $backgroundColour;
-  font-size: 1rem;
+  font-family: 'bignoodletitlingregular', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
   text-align: center;
+}
+
+.one {
+  color: $one;
+}
+
+.two {
+  color: $two;
+}
+
+.three {
+  color: $three;
+}
+
+.four {
+  color: $four;
+}
+
+.five {
+  color: $five;
+}
+
+.six {
+  color: $six;
 }
 
 .covered {
@@ -38,4 +103,8 @@ $six: #943b96;
 
 .exploded {
   background-color: $mine;
+  background-image: url(./img/mine.svg);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
 }

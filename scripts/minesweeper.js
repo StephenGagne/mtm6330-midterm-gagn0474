@@ -8,7 +8,7 @@ const game = {
     level: 1,
     numOfRows: 10,
     numOfMines: 0,
-    maxNumOfMines: 10
+    maxNumOfMines: 15
 }
 
 function newGame() {
@@ -80,17 +80,31 @@ function newGame() {
                 }
             }
         }
+    }
 
-        //remove text from mine cells and cover all of the cells
-        for (const cell of $cells) {
-            if (cell.classList.contains('mine')) {
-                cell.textContent = ''
+    const colours = ['zero', 'one', 'two', 'three', 'four', 'five', 'six']
+    //add the colours for the numbers
+    for (const cell of $cells) {
+        let number = cell.textContent
+        if (number) {
+            if (number > 6) {
+                number = 6
             }
-            cell.classList.add('covered')
+            cell.classList.add(colours[number])
         }
 
     }
+
+    //remove text from mine cells and cover all of the cells
+    for (const cell of $cells) {
+        if (cell.classList.contains('mine')) {
+            cell.textContent = ''
+        }
+        cell.classList.add('covered')
+    }
+
 }
+
 
 newGame()
 

@@ -1,7 +1,44 @@
+@import "./fonts/stylesheet.css";
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #233b74;
+  margin-bottom: 2%;
+}
+
+.logo {
+  flex-basis: 15%;
+  display: flex;
+  margin-left: 2.5%;
+}
+
+.logo img {
+  display: block;
+  max-height: 70px;
+}
+
+.logline {
+  flex-basis: 60%;
+  font-family: "bignoodletitlingregular";
+  font-size: 3.5rem;
+  color: #eaddce;
+  margin: 0 2%;
+  align-self: flex-end;
+}
+
 .gameContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
@@ -13,9 +50,35 @@
   width: 30px;
   cursor: pointer;
   background-color: #f7f2ec;
-  border: 1px solid #eee;
-  font-size: 1rem;
+  border: 1px solid #f9f4ee;
+  font-family: "bignoodletitlingregular", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
   text-align: center;
+}
+
+.one {
+  color: #1072ba;
+}
+
+.two {
+  color: #078a7e;
+}
+
+.three {
+  color: #fdb71e;
+}
+
+.four {
+  color: #f26739;
+}
+
+.five {
+  color: #ee2d2e;
+}
+
+.six {
+  color: #943b96;
 }
 
 .covered {
@@ -25,6 +88,10 @@
 
 .exploded {
   background-color: #b31f24;
+  background-image: url(./img/mine.svg);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */
