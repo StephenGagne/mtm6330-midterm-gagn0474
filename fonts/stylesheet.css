@@ -5,7 +5,7 @@
 @font-face {
     font-family: 'bebas_neuebook';
     src: url('/fonts/bebasneue_book-webfont.woff2') format('woff2'),
-        url('/fonts/bebasneue_book-webfont.woff2') format('woff');
+        url('/fonts/bebasneue_book-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
