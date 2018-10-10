@@ -164,7 +164,10 @@ const $easy = document.getElementById('easy')
 const $medium = document.getElementById('medium')
 const $hard = document.getElementById('hard')
 
-$reset.addEventListener('click', newGame)
+$reset.addEventListener('click', function () {
+    $menu.classList.add('hidden')
+    newGame()
+})
 $menuBtn.addEventListener('click', function () {
     $menu.classList.toggle('hidden')
 })

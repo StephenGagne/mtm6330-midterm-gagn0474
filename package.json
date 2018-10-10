@@ -1,0 +1,14 @@
+{
+  "name": "week5-gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Robert McKenney <robert@mckenney.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^9.1.5",
+    "cssnano": "^4.1.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}
