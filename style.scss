@@ -18,6 +18,11 @@ $six: #943b96;
   box-sizing: border-box;
 }
 
+body {
+  background-color: $backgroundColour;
+  font-family: 'bignoodletitlingregular', sans-serif;
+}
+
 header {
   height: 80px;
   display: flex;
@@ -25,7 +30,6 @@ header {
   justify-content: flex-start;
   align-items: center;
   background-color: $darkBlue;
-  margin-bottom: 2%;
 }
 
 .logo {
@@ -42,18 +46,92 @@ header {
 .logline {
   flex-basis: 60%;
   font-family: 'bignoodletitlingregular';
-  font-size: 3.5rem;
+  font-size: 50px;
   color: $activeCell;
-  margin: 0 2%;
+  margin: 0 2.5%;
   align-self: flex-end;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  border: 1px solid black;
+
+  img {
+    height: 30px;
+  }
+
+  .toggle {
+    display: flex;
+    flex-direction: row;
+    width: 65px;
+  }
+
+  .window {
+    display: flex;
+    flex-direction: row;
+    width: 65px;
+  }
+}
+
 .gameContainer {
+  margin-top: 5%;
+  padding: 0.5%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 4px solid $one;
+  background-color: $backgroundColour;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 2.5rem;
+  background-color: transparentize($color: $inactiveCell, $amount: 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .button {
+    min-width: 10rem;
+    margin: 2.5%;
+  }
+}
+
+.mobileControls {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1%;
+  justify-content: space-around;
+}
+
+.button {
+  display: inline-block;
+  height: 50px;
+  padding: 0 1.5rem;
+  line-height: 55px;
+  cursor: pointer;
+  margin: 0px 1rem;
+  background-color: $one;
+  text-align: center;
+  color: $inactiveCell;
+  font-size: 1.5rem;
 }
 
 .row {
@@ -65,8 +143,8 @@ header {
   width: 30px;
   cursor: pointer;
   background-color: $inactiveCell;
-  border: 1px solid $backgroundColour;
-  font-family: 'bignoodletitlingregular', sans-serif;
+  border: 1px solid #fff;
+
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: center;
@@ -107,4 +185,9 @@ header {
   background-position: center;
   background-size: 80%;
   background-repeat: no-repeat;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }

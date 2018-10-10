@@ -4,6 +4,7 @@ const $rows = $game.getElementsByClassName('row')
 let allRows = []
 const $mines = $game.getElementsByClassName('mine')
 
+
 const game = {
     level: 1,
     numOfRows: 10,
@@ -153,4 +154,32 @@ $game.addEventListener('click', function (e) {
             mine.classList.add('exploded')
         }
     }
+})
+
+//buttons
+const $menu = document.getElementById('menu')
+const $reset = document.getElementById('reset')
+const $menuBtn = document.getElementById('menuBtn')
+const $easy = document.getElementById('easy')
+const $medium = document.getElementById('medium')
+const $hard = document.getElementById('hard')
+
+$reset.addEventListener('click', newGame)
+$menuBtn.addEventListener('click', function () {
+    $menu.classList.toggle('hidden')
+})
+$easy.addEventListener('click', function () {
+    game.maxNumOfMines = 10
+    $menu.classList.toggle('hidden')
+    newGame()
+})
+$medium.addEventListener('click', function () {
+    game.maxNumOfMines = 15
+    $menu.classList.toggle('hidden')
+    newGame()
+})
+$hard.addEventListener('click', function () {
+    game.maxNumOfMines = 20
+    $menu.classList.toggle('hidden')
+    newGame()
 })

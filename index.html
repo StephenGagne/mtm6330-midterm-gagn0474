@@ -17,8 +17,37 @@
         <h1 class="logline">Minesweeper</h1>
     </header>
     <main>
+        <div class="icons" id="icons">
+            <div class="toggle" id="toggle">
+                <div class="flag">
+                    <img src="./img/flag.svg" alt="">
+                </div>
+                <div class="cursor">
+                    A
+                </div>
+            </div>
+            <div class="smile" id="smile">
+                <img src="./img/neutral-face.svg" alt="">
+            </div>
+            <div class="counter" id="counter">
+                <div class="icon">
+                    <img src="./img/mine.svg" alt="">
+                </div>
+                <div class="window">10</div>
+            </div>
+        </div>
         <div class="gameContainer" id="gameContainer">
+            <!-- The cells go in here -->
+        </div>
+        <div class="menu hidden" id="menu">
+            <div class="button" id="easy">Easy</div>
+            <div class="button" id="medium">Medium</div>
+            <div class="button" id="hard">Difficult</div>
+        </div>
 
+        <div class="mobileControls">
+            <div class="button" id="menuBtn">Difficulty</div>
+            <div class="button" id="reset">Reset Game</div>
         </div>
     </main>
     <footer>
