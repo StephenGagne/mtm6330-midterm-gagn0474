@@ -2,7 +2,7 @@
   "name": "midterm-project",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Robert McKenney <robert@mckenney.ca>",
+  "author": "Stephen Gagne <gagn0474@algonquinlive.com>",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.1.5",
