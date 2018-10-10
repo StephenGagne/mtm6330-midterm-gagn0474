@@ -12,7 +12,8 @@ $four: #f26739;
 $five: #ee2d2e;
 $six: #943b96;
 
-@import "./fonts/stylesheet";
+//import fonts
+@import "../../fonts/stylesheet.css";
 
 html {
   box-sizing: border-box;
@@ -93,8 +94,12 @@ main {
 }
 
 .gameContainer {
+  padding: 1%;
+}
+
+.game {
   margin-top: 5%;
-  padding: 0.5%;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -187,7 +192,7 @@ main {
 
 .exploded {
   background-color: $mine;
-  background-image: url(./img/mine.svg);
+  background-image: url(../../img/mine.svg);
   background-position: center;
   background-size: 80%;
   background-repeat: no-repeat;

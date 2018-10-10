@@ -1,8 +1,9 @@
-const $game = document.getElementById('gameContainer')
+const $game = document.getElementById('game')
 const $cells = $game.getElementsByClassName('col')
 const $rows = $game.getElementsByClassName('row')
 let allRows = []
 const $mines = $game.getElementsByClassName('mine')
+const $icons = document.getElementById('icons')
 
 
 const game = {
@@ -34,6 +35,7 @@ function newGame() {
         $game.appendChild(thisRow)
 
     }
+
     allRows = Array.from($rows)
 
     //place the mines in random cells
