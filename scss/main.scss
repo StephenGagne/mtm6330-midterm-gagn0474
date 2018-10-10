@@ -12,10 +12,16 @@ $four: #f26739;
 $five: #ee2d2e;
 $six: #943b96;
 
-@import "./fonts/stylesheet.css";
+@import "./fonts/stylesheet";
 
-* {
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
