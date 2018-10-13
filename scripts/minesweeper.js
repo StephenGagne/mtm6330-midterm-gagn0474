@@ -93,7 +93,6 @@ function newGame() {
             }
             cell.classList.add(colours[number])
         }
-
     }
 
     //remove text from mine cells and cover all of the cells
@@ -109,12 +108,13 @@ function newGame() {
 
 newGame()
 
+//check all neighbouring cells
+
 $game.addEventListener('click', function (e) {
     if (e.target.classList.contains('col')) {
         e.target.classList.remove('covered')
         // if an empty tile is clicked, show all connected empty tiles
         if (!e.target.textContent && !e.target.classList.contains('mine')) {
-            e.target.classList.remove('covered')
             //set the starting row to the current row
             let startingRow = e.target.closest('.row')
             let rowArray = Array.from(startingRow.querySelectorAll('.col'))
