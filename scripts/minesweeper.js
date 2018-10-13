@@ -5,7 +5,6 @@ let allRows = []
 const $mines = $game.getElementsByClassName('mine')
 const $icons = document.getElementById('icons')
 
-
 const game = {
     level: 1,
     numOfRows: 10,
@@ -18,6 +17,7 @@ function newGame() {
     $game.innerHTML = ''
     //reset number of mines and cell counts
     game.numOfMines = 0
+    toReveal.length = 0
     for (const cell of $cells) {
         cell.textContent = ''
         cell.classList.remove('exploded')
@@ -107,11 +107,29 @@ function newGame() {
 
 }
 
+function reveal(cells) {
+    for (const cell of cells) {
+        cell.classList.remove('covered')
+    }
+    toReveal.length = 0
+}
 
-newGame()
-
-//check all neighbouring cells
-
+function checkLeftRight() {
+    if (!checkRow[cellIndex].classList.contains('mine')) {
+        toReveal.push(checkRow[cellIndex])
+        if (cellIndex < checkRow.length - 1) {
+            if (!checkRow[cellIndex + 1].classList.contains('mine')) {
+                toReveal.push(checkRow[cellIndex + 1])
+            }
+        }
+        if (cellIndex > 0) {
+            if (!checkRow[cellIndex - 1].classList.contains('mine')) {
+                toReveal.push(checkRow[cellIndex - 1])
+            }
+        }
+    }
+}
+const toReveal = []
 $game.addEventListener('click', function (e) {
     if (e.target.classList.contains('col')) {
         e.target.classList.remove('covered')
@@ -119,43 +137,37 @@ $game.addEventListener('click', function (e) {
         if (!e.target.textContent && !e.target.classList.contains('mine')) {
             //set the starting row to the current row
             let startingRow = e.target.closest('.row')
-            let rowArray = Array.from(startingRow.querySelectorAll('.col'))
-            let startingCell = rowArray.indexOf(e.target)
+            let rowIndex = allRows.indexOf(startingRow)
+            checkRow = Array.from(allRows[rowIndex].querySelectorAll('.col'))
+            cellIndex = checkRow.indexOf(e.target)
+            toReveal.push[e.target]
 
-            for (let row = allRows.indexOf(startingRow); row < allRows.length; row++) {
-                let currentCells = Array.from(allRows[row].querySelectorAll('.col'))
-                //check all cells in current row
-                for (let i = startingCell; i < currentCells.length; i++) {
-                    if (currentCells[i].textContent) {
-                        break
-                    } else {
-                        currentCells[i].classList.remove('covered')
-                        if (i < currentCells.length - 1) {
-                            currentCells[i + 1].classList.remove('covered')
-                        }
-                    }
-                }
-                for (let i = startingCell; i > 0; i--) {
-                    if (currentCells[i].textContent) {
-                        break
-                    } else {
-                        currentCells[i].classList.remove('covered')
-                        if (i > 0) {
-                            currentCells[i - 1].classList.remove('covered')
-                        }
-                    }
-                }
-
+            checkLeftRight()
+            if (rowIndex < allRows.length - 1) {
+                checkRow = Array.from(allRows[rowIndex + 1].querySelectorAll('.col'))
+                checkLeftRight()
+            }
+            if (rowIndex > 0) {
+                checkRow = Array.from(allRows[rowIndex - 1].querySelectorAll('.col'))
+                checkLeftRight()
             }
 
-        }
+            reveal(toReveal)
 
+
+
+
+
+
+        }
     }
+
     if (e.target.classList.contains('mine')) {
         for (const mine of $mines) {
             mine.classList.add('exploded')
         }
     }
+
 })
 
 //buttons
@@ -188,3 +200,6 @@ $hard.addEventListener('click', function () {
     $menu.classList.toggle('hidden')
     newGame()
 })
+
+game.maxNumOfMines = 0
+newGame()
