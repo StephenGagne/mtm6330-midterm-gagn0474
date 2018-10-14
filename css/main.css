@@ -85,7 +85,7 @@ main {
     border: 3px solid #1072ba;
     padding: 2px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center; }
   .icons img {
     height: 90%;
@@ -105,7 +105,7 @@ main {
       background-color: #f7f2ec;
       padding: 1%;
       display: flex;
-      justify-content: space-between; }
+      justify-content: center; }
       .icons .toggle div img {
         padding: 2%; }
   .icons .toggle .toggled {
