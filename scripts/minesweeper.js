@@ -5,6 +5,7 @@ let allRows = []
 const $mines = $game.getElementsByClassName('mine')
 const $icons = document.getElementById('icons')
 const $counter = document.getElementById('counter')
+let flag = false
 
 const game = {
     level: 1,
@@ -131,44 +132,59 @@ function checkLeftRight() {
     }
 }
 const toReveal = []
+
+//set up cell flagging
+const $toggle = document.getElementById('toggle')
+
+$toggle.addEventListener('click', function () {
+    if (flag === true) {
+        flag = false
+        $toggle.querySelector('.flag').classList.toggle('toggled')
+        $toggle.querySelector('.cursor').classList.toggle('toggled')
+    } else {
+        flag = true
+        $toggle.querySelector('.flag').classList.toggle('toggled')
+        $toggle.querySelector('.cursor').classList.toggle('toggled')
+    }
+})
+
 $game.addEventListener('click', function (e) {
     if (e.target.classList.contains('col')) {
-        e.target.classList.remove('covered')
-        // if an empty tile is clicked, show all connected empty tiles
-        if (!e.target.textContent && !e.target.classList.contains('mine')) {
-            //set the starting row to the current row
-            let startingRow = e.target.closest('.row')
-            let rowIndex = allRows.indexOf(startingRow)
-            checkRow = Array.from(allRows[rowIndex].querySelectorAll('.col'))
-            cellIndex = checkRow.indexOf(e.target)
-            toReveal.push[e.target]
+        if (flag === true) {
+            e.target.classList.toggle('flagged')
+        } else {
+            if (!e.target.classList.contains('flagged')) {
+                e.target.classList.remove('covered')
+                // if an empty tile is clicked, show all connected empty tiles
+                if (!e.target.textContent && !e.target.classList.contains('mine')) {
+                    //set the starting row to the current row
+                    let startingRow = e.target.closest('.row')
+                    let rowIndex = allRows.indexOf(startingRow)
+                    checkRow = Array.from(allRows[rowIndex].querySelectorAll('.col'))
+                    cellIndex = checkRow.indexOf(e.target)
+                    toReveal.push[e.target]
 
-            checkLeftRight()
-            if (rowIndex < allRows.length - 1) {
-                checkRow = Array.from(allRows[rowIndex + 1].querySelectorAll('.col'))
-                checkLeftRight()
+                    checkLeftRight()
+                    if (rowIndex < allRows.length - 1) {
+                        checkRow = Array.from(allRows[rowIndex + 1].querySelectorAll('.col'))
+                        checkLeftRight()
+                    }
+                    if (rowIndex > 0) {
+                        checkRow = Array.from(allRows[rowIndex - 1].querySelectorAll('.col'))
+                        checkLeftRight()
+                    }
+
+                    reveal(toReveal)
+                }
+
+                if (e.target.classList.contains('mine')) {
+                    for (const mine of $mines) {
+                        mine.classList.add('exploded')
+                    }
+                }
             }
-            if (rowIndex > 0) {
-                checkRow = Array.from(allRows[rowIndex - 1].querySelectorAll('.col'))
-                checkLeftRight()
-            }
-
-            reveal(toReveal)
-
-
-
-
-
-
         }
     }
-
-    if (e.target.classList.contains('mine')) {
-        for (const mine of $mines) {
-            mine.classList.add('exploded')
-        }
-    }
-
 })
 
 //buttons
@@ -183,6 +199,8 @@ const $sbMedium = document.getElementById('sb-medium')
 const $hard = document.getElementById('hard')
 const $sbHard = document.getElementById('sb-hard')
 const $sbRandom = document.getElementById('sb-random')
+const $smile = document.getElementById('smile')
+
 
 function reset() {
     $menu.classList.add('hidden')
@@ -191,6 +209,7 @@ function reset() {
 
 $reset.addEventListener('click', reset)
 $sbReset.addEventListener('click', reset)
+$smile.addEventListener('click', reset)
 
 $menuBtn.addEventListener('click', function () {
     $menu.classList.toggle('hidden')

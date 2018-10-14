@@ -30,8 +30,6 @@ body {
   font-family: 'bignoodletitlingregular', sans-serif;
 }
 
-
-
 header {
   height: 80px;
   display: flex;
@@ -136,7 +134,33 @@ main {
   .toggle {
     display: flex;
     flex-direction: row;
-    width: 65px;
+    padding: 0;
+    cursor: pointer;
+
+
+    div {
+      border: 1px solid $one;
+      width: 5vh;
+      height: 5vh;
+      opacity: 0.5;
+      filter: grayscale(100%);
+      background-color: $inactiveCell;
+      padding: 1%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        padding: 2%;
+
+      }
+    }
+
+  }
+
+  .toggle .toggled {
+    background-color: $one;
+    opacity: 1;
+    filter: grayscale(0%);
   }
 
   .counter {
@@ -268,6 +292,12 @@ main {
 .covered {
   background-color: $activeCell;
   color: $activeCell;
+}
+
+.flagged {
+  content: "";
+  background-image: url(../../img/flag.svg);
+  background-color: $inactiveCell;
 }
 
 .exploded {

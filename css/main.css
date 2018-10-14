@@ -94,7 +94,24 @@ main {
   .icons .toggle {
     display: flex;
     flex-direction: row;
-    width: 65px; }
+    padding: 0;
+    cursor: pointer; }
+    .icons .toggle div {
+      border: 1px solid #1072ba;
+      width: 5vh;
+      height: 5vh;
+      opacity: 0.5;
+      filter: grayscale(100%);
+      background-color: #f7f2ec;
+      padding: 1%;
+      display: flex;
+      justify-content: center; }
+      .icons .toggle div img {
+        padding: 2%; }
+  .icons .toggle .toggled {
+    background-color: #1072ba;
+    opacity: 1;
+    filter: grayscale(0%); }
   .icons .counter {
     display: flex;
     flex-direction: row;
@@ -201,6 +218,11 @@ main {
 .covered {
   background-color: #eaddce;
   color: #eaddce; }
+
+.flagged {
+  content: "";
+  background-image: url(../../img/flag.svg);
+  background-color: #f7f2ec; }
 
 .exploded {
   background-color: #b31f24;
