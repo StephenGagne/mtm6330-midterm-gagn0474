@@ -10,7 +10,7 @@ const game = {
     level: 1,
     numOfRows: 10,
     numOfMines: 0,
-    maxNumOfMines: 15
+    maxNumOfMines: 10
 }
 
 function newGame() {
@@ -231,5 +231,5 @@ $sbRandom.addEventListener('click', function () {
     game.maxNumOfMines = (Math.floor(Math.random() * game.numOfRows) + 10)
     newGame()
 })
-game.maxNumOfMines = 0
+
 newGame()

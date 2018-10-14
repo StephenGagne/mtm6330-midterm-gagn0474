@@ -114,13 +114,23 @@ main {
 .icons {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 50vh;
   height: 40px;
   justify-content: space-between;
-  border: 1px solid black;
+  margin-bottom: 0;
+
+  >* {
+    border: 3px solid $one;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 
   img {
-    height: 30px;
+    height: 90%;
+    width: auto;
+    margin: 1%;
   }
 
   .toggle {
@@ -146,12 +156,16 @@ main {
   flex-grow: 1;
   padding: 1%;
   display: flex;
+  max-width: 50%;
+  margin: 2% auto 0;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .game {
-  margin-top: 5%;
+  margin-top: 1%;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -179,9 +193,10 @@ main {
 }
 
 .mobileControls {
+  justify-self: center;
   display: flex;
   flex-direction: row;
-  margin-top: 1%;
+  margin-top: 2%;
   justify-content: space-around;
 
   @media screen and (min-width: 1000px) {
@@ -193,13 +208,22 @@ main {
   display: inline-block;
   height: 50px;
   padding: 0 1.5rem;
+  min-width: 120px;
   line-height: 55px;
   cursor: pointer;
   margin: 0px 1rem;
   background-color: $one;
   text-align: center;
-  color: $inactiveCell;
-  font-size: 1.5rem;
+  color: $activeCell;
+  font-size: 1.3rem;
+
+  @media screen and (min-width: 600px) {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: $inactiveCell;
+  }
 }
 
 .row {
@@ -207,13 +231,13 @@ main {
 }
 
 .col {
-  height: 30px;
-  width: 30px;
+  height: 5vh;
+  width: 5vh;
   cursor: pointer;
   background-color: $inactiveCell;
   border: 1px solid #fff;
-  font-size: 1.5rem;
-  line-height: 1.5;
+  font-size: 4vh;
+  line-height: 6vh;
   text-align: center;
 }
 
