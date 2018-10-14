@@ -105,7 +105,7 @@ main {
       background-color: #f7f2ec;
       padding: 1%;
       display: flex;
-      justify-content: center; }
+      justify-content: space-between; }
       .icons .toggle div img {
         padding: 2%; }
   .icons .toggle .toggled {
