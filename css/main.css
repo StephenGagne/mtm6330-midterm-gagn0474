@@ -38,11 +38,41 @@ header {
 
 main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   position: relative; }
+
+.sidebar {
+  display: none; }
+  @media screen and (min-width: 1000px) {
+    .sidebar {
+      display: flex;
+      padding: 2% 0;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: #eaddce;
+      height: 80vh;
+      max-width: 20%;
+      flex-basis: 25%;
+      justify-self: flex-start;
+      margin: 1%; } }
+  .sidebar .button {
+    color: #eaddce; }
+    .sidebar .button:hover {
+      color: white; }
+    .sidebar .button:last-child {
+      display: none; }
+      @media screen and (min-height: 700px) {
+        .sidebar .button:last-child {
+          display: inline-block; } }
+  .sidebar .levels {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 15%; }
 
 .icons {
   display: flex;
@@ -57,13 +87,21 @@ main {
     display: flex;
     flex-direction: row;
     width: 65px; }
-  .icons .window {
+  .icons .counter {
     display: flex;
     flex-direction: row;
     width: 65px; }
+    .icons .counter .window {
+      font-size: 28px;
+      text-align: right;
+      padding: 5px; }
 
 .gameContainer {
-  padding: 1%; }
+  flex-grow: 1;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
 
 .game {
   margin-top: 5%;
@@ -94,6 +132,9 @@ main {
   flex-direction: row;
   margin-top: 1%;
   justify-content: space-around; }
+  @media screen and (min-width: 1000px) {
+    .mobileControls {
+      display: none; } }
 
 .button {
   display: inline-block;

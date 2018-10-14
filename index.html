@@ -17,6 +17,15 @@
         <h1 class="logline">Minesweeper</h1>
     </header>
     <main>
+        <div class="sidebar">
+            <div class="button" id="sb-reset">Reset Game</div>
+            <div class="levels">
+                <div class="button" id="sb-easy">Beginner</div>
+                <div class="button" id="sb-medium">Intermediate</div>
+                <div class="button" id="sb-hard">Expert</div>
+                <div class="button" id="sb-random">Random</div>
+            </div>
+        </div>
         <div class="gameContainer" id="gameContainer">
             <div class="icons" id="icons">
                 <div class="toggle" id="toggle">
@@ -30,11 +39,11 @@
                 <div class="smile" id="smile">
                     <img src="./img/neutral-face.svg" alt="">
                 </div>
-                <div class="counter" id="counter">
+                <div class="counter">
                     <div class="icon">
                         <img src="./img/mine.svg" alt="">
                     </div>
-                    <div class="window">10</div>
+                    <div class="window" id="counter">10</div>
                 </div>
             </div>
             <div class="game" id="game">

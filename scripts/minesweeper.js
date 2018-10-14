@@ -4,6 +4,7 @@ const $rows = $game.getElementsByClassName('row')
 let allRows = []
 const $mines = $game.getElementsByClassName('mine')
 const $icons = document.getElementById('icons')
+const $counter = document.getElementById('counter')
 
 const game = {
     level: 1,
@@ -33,7 +34,7 @@ function newGame() {
             thisRow.appendChild(thisCol)
         }
         $game.appendChild(thisRow)
-
+        $counter.textContent = game.maxNumOfMines;
     }
 
     allRows = Array.from($rows)
@@ -173,33 +174,62 @@ $game.addEventListener('click', function (e) {
 //buttons
 const $menu = document.getElementById('menu')
 const $reset = document.getElementById('reset')
+const $sbReset = document.getElementById('sb-reset')
 const $menuBtn = document.getElementById('menuBtn')
 const $easy = document.getElementById('easy')
+const $sbEasy = document.getElementById('sb-easy')
 const $medium = document.getElementById('medium')
+const $sbMedium = document.getElementById('sb-medium')
 const $hard = document.getElementById('hard')
+const $sbHard = document.getElementById('sb-hard')
+const $sbRandom = document.getElementById('sb-random')
 
-$reset.addEventListener('click', function () {
+function reset() {
     $menu.classList.add('hidden')
     newGame()
-})
+}
+
+$reset.addEventListener('click', reset)
+$sbReset.addEventListener('click', reset)
+
 $menuBtn.addEventListener('click', function () {
     $menu.classList.toggle('hidden')
 })
-$easy.addEventListener('click', function () {
-    game.maxNumOfMines = 10
-    $menu.classList.toggle('hidden')
-    newGame()
-})
-$medium.addEventListener('click', function () {
-    game.maxNumOfMines = 15
-    $menu.classList.toggle('hidden')
-    newGame()
-})
-$hard.addEventListener('click', function () {
-    game.maxNumOfMines = 20
-    $menu.classList.toggle('hidden')
-    newGame()
-})
 
+function makeEasy() {
+    game.numOfRows = 10
+    game.maxNumOfMines = 10
+    $menu.classList.add('hidden')
+    newGame()
+}
+
+$easy.addEventListener('click', makeEasy)
+$sbEasy.addEventListener('click', makeEasy)
+
+function makeMedium() {
+    game.numOfRows = 10
+    game.maxNumOfMines = 15
+    $menu.classList.add('hidden')
+    newGame()
+}
+
+$medium.addEventListener('click', makeMedium)
+$sbMedium.addEventListener('click', makeMedium)
+
+function makeHard() {
+    game.numOfRows = 10
+    game.maxNumOfMines = 20
+    $menu.classList.add('hidden')
+    newGame()
+}
+
+$hard.addEventListener('click', makeHard)
+$sbHard.addEventListener('click', makeHard)
+
+$sbRandom.addEventListener('click', function () {
+    game.numOfRows = (Math.floor(Math.random() * 5) + 10)
+    game.maxNumOfMines = (Math.floor(Math.random() * game.numOfRows) + 10)
+    newGame()
+})
 game.maxNumOfMines = 0
 newGame()
