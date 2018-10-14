@@ -85,7 +85,6 @@ main {
     border: 3px solid #1072ba;
     padding: 2px;
     display: flex;
-    box-sizing: content-box;
     justify-content: center;
     align-content: center; }
   .icons img {
