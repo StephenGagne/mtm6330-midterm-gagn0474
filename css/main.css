@@ -220,7 +220,6 @@ main {
   color: #eaddce; }
 
 .flagged {
-  content: "";
   background-image: url(../../img/flag.svg);
   background-color: #f7f2ec; }
 
