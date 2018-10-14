@@ -114,7 +114,9 @@ main {
     filter: grayscale(0%); }
   .icons .smile {
     height: 5vh;
-    width: 5vh; }
+    min-height: 40px;
+    width: 5vh;
+    min-width: 40px; }
   .icons .counter {
     display: flex;
     flex-direction: row;
