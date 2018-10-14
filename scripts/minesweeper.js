@@ -152,6 +152,9 @@ $game.addEventListener('click', function (e) {
     if (e.target.classList.contains('col')) {
         if (flag === true) {
             e.target.classList.toggle('flagged')
+            if (e.target.classList.contains('mine')) {
+                $counter.textContent--
+            }
         } else {
             if (!e.target.classList.contains('flagged')) {
                 e.target.classList.remove('covered')
