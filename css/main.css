@@ -112,10 +112,13 @@ main {
     background-color: #1072ba;
     opacity: 1;
     filter: grayscale(0%); }
+  .icons .smile {
+    height: 5vh;
+    width: 5vh; }
   .icons .counter {
     display: flex;
     flex-direction: row;
-    width: 65px; }
+    min-width: 80px; }
     .icons .counter .window {
       font-size: 28px;
       text-align: right;

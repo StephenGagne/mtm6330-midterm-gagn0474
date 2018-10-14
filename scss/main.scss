@@ -163,10 +163,15 @@ main {
     filter: grayscale(0%);
   }
 
+  .smile {
+    height: 5vh;
+    width: 5vh;
+  }
+
   .counter {
     display: flex;
     flex-direction: row;
-    width: 65px;
+    min-width: 80px;
 
     .window {
       font-size: 28px;
