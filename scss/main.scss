@@ -28,6 +28,8 @@ html {
 body {
   background-color: $backgroundColour;
   font-family: 'bignoodletitlingregular', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -62,7 +64,7 @@ header {
 main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   position: relative;
@@ -71,7 +73,7 @@ main {
 .sidebar {
   display: none;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1025px) {
     display: flex;
     padding: 2% 0;
     flex-direction: column;
@@ -164,9 +166,11 @@ main {
   }
 
   .smile {
+    cursor: pointer;
     height: 5vh;
     min-height: 40px;
     width: 5vh;
+
     min-width: 40px;
   }
 
@@ -230,7 +234,7 @@ main {
   margin-top: 2%;
   justify-content: space-around;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 }
@@ -262,8 +266,10 @@ main {
 }
 
 .col {
-  height: 5vh;
-  width: 5vh;
+  height: 8vw;
+  max-height: 5vh;
+  width: 8vw;
+  max-width: 5vh;
   cursor: pointer;
   background-color: $inactiveCell;
   border: 1px solid #fff;
@@ -317,4 +323,13 @@ main {
 .hidden {
   opacity: 0;
   visibility: hidden;
+}
+
+footer {
+  height: 4.5vh;
+  width: 99%;
+  margin: 1% auto 0.5%;
+  background-color: $darkBlue;
+  position: absolute;
+  bottom: 0;
 }

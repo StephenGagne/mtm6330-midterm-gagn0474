@@ -9,7 +9,9 @@ html {
 
 body {
   background-color: #f9f4ee;
-  font-family: 'bignoodletitlingregular', sans-serif; }
+  font-family: 'bignoodletitlingregular', sans-serif;
+  display: flex;
+  flex-direction: column; }
 
 header {
   height: 80px;
@@ -39,14 +41,14 @@ header {
 main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   position: relative; }
 
 .sidebar {
   display: none; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1025px) {
     .sidebar {
       display: flex;
       padding: 2% 0;
@@ -113,6 +115,7 @@ main {
     opacity: 1;
     filter: grayscale(0%); }
   .icons .smile {
+    cursor: pointer;
     height: 5vh;
     min-height: 40px;
     width: 5vh;
@@ -167,7 +170,7 @@ main {
   flex-direction: row;
   margin-top: 2%;
   justify-content: space-around; }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1025px) {
     .mobileControls {
       display: none; } }
 
@@ -193,8 +196,10 @@ main {
   display: flex; }
 
 .col {
-  height: 5vh;
-  width: 5vh;
+  height: 8vw;
+  max-height: 5vh;
+  width: 8vw;
+  max-width: 5vh;
   cursor: pointer;
   background-color: #f7f2ec;
   border: 1px solid #fff;
@@ -238,3 +243,11 @@ main {
 .hidden {
   opacity: 0;
   visibility: hidden; }
+
+footer {
+  height: 4.5vh;
+  width: 99%;
+  margin: 1% auto 0.5%;
+  background-color: #233b74;
+  position: absolute;
+  bottom: 0; }
