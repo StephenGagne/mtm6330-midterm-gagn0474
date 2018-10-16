@@ -9,9 +9,7 @@ html {
 
 body {
   background-color: #f9f4ee;
-  font-family: 'bignoodletitlingregular', sans-serif;
-  display: flex;
-  flex-direction: column; }
+  font-family: 'bignoodletitlingregular', sans-serif; }
 
 header {
   height: 80px;
