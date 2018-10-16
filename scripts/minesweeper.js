@@ -185,6 +185,9 @@ $game.addEventListener('click', function (e) {
                     for (const mine of $mines) {
                         mine.classList.add('exploded')
                     }
+                    setTimeout(function () {
+                        $menu.classList.remove('hidden')
+                    }, 2000)
                 }
             }
         }
@@ -251,7 +254,7 @@ $sbHard.addEventListener('click', makeHard)
 
 $sbRandom.addEventListener('click', function () {
     game.numOfRows = (Math.floor(Math.random() * 5) + 10)
-    game.maxNumOfMines = (Math.floor(Math.random() * game.numOfRows) + 10)
+    game.maxNumOfMines = (Math.floor(Math.random() * (game.numOfRows * 2)) + 10)
     newGame()
 })
 
