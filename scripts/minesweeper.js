@@ -163,6 +163,9 @@ $game.addEventListener('mouseup', function () {
     $face.src = "./img/neutral-face.svg"
 })
 
+// create variable for timer on win/loss
+let popup = null
+
 $game.addEventListener('click', function (e) {
     if (e.target.classList.contains('col')) {
         if (flag === true) {
@@ -176,7 +179,7 @@ $game.addEventListener('click', function (e) {
                         cell.classList.remove('covered')
                         document.getElementById('face').src = "./img/happy-face.svg"
                     }
-                    setTimeout(function () {
+                    popup = setTimeout(function () {
                         $menu.classList.remove('hidden')
                     }, 2000)
                 }
@@ -210,7 +213,7 @@ $game.addEventListener('click', function (e) {
                     for (const mine of $mines) {
                         mine.classList.add('exploded')
                     }
-                    setTimeout(function () {
+                    popup = setTimeout(function () {
                         $menu.classList.remove('hidden')
                     }, 2000)
                 }
@@ -235,6 +238,7 @@ const $smile = document.getElementById('smile')
 
 function reset() {
     $menu.classList.add('hidden')
+    clearTimeout(popup)
     newGame()
 }
 
