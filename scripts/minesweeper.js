@@ -153,8 +153,8 @@ $game.addEventListener('click', function (e) {
         if (flag === true) {
             e.target.classList.toggle('flagged')
             if (e.target.classList.contains('mine')) {
-                // e.target.classList.remove('mine')
-                // $counter.textContent--
+                e.target.classList.remove('mine')
+                $counter.textContent--
             }
         } else {
             if (!e.target.classList.contains('flagged')) {
@@ -207,7 +207,6 @@ const $hard = document.getElementById('hard')
 const $sbHard = document.getElementById('sb-hard')
 const $sbRandom = document.getElementById('sb-random')
 const $smile = document.getElementById('smile')
-
 
 function reset() {
     $menu.classList.add('hidden')
