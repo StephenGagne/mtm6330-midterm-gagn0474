@@ -5,21 +5,26 @@ let allRows = []
 const $mines = $game.getElementsByClassName('mine')
 const $icons = document.getElementById('icons')
 const $counter = document.getElementById('counter')
+const $face = document.getElementById('face')
 let flag = false
 
 const game = {
     level: 1,
     numOfRows: 10,
     numOfMines: 0,
-    maxNumOfMines: 10
+    maxNumOfMines: 10,
+    minesFound: 0
 }
 
 function newGame() {
     //reset game board
     $game.innerHTML = ''
+    //Set the face icon back
+    $face.src = "./img/neutral-face.svg"
     //reset number of mines and cell counts
     game.numOfMines = 0
     toReveal.length = 0
+    game.minesFound = 0
     for (const cell of $cells) {
         cell.textContent = ''
         cell.classList.remove('exploded')
@@ -155,6 +160,16 @@ $game.addEventListener('click', function (e) {
             if (e.target.classList.contains('mine')) {
                 e.target.classList.remove('mine')
                 $counter.textContent--
+                game.minesFound++
+                if (game.minesFound === game.maxNumOfMines) {
+                    for (const cell of $cells) {
+                        cell.classList.remove('covered')
+                        document.getElementById('face').src = "./img/happy-face.svg"
+                    }
+                    setTimeout(function () {
+                        $menu.classList.remove('hidden')
+                    }, 2000)
+                }
             }
         } else {
             if (!e.target.classList.contains('flagged')) {
@@ -182,6 +197,7 @@ $game.addEventListener('click', function (e) {
                 }
 
                 if (e.target.classList.contains('mine')) {
+                    $face.src = "./img/sad-face.svg"
                     for (const mine of $mines) {
                         mine.classList.add('exploded')
                     }
