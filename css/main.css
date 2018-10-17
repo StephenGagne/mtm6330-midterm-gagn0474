@@ -253,9 +253,17 @@ main {
   visibility: hidden; }
 
 footer {
-  height: 4.5vh;
+  display: none;
+  height: 4vh;
   width: 99%;
   margin: 1% auto 0.5%;
   background-color: #233b74;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  footer p {
+    color: #eaddce;
+    text-align: center;
+    line-height: 4vh; }

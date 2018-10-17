@@ -337,10 +337,24 @@ main {
 }
 
 footer {
-  height: 4.5vh;
-  width: 99%;
-  margin: 1% auto 0.5%;
-  background-color: $darkBlue;
-  position: absolute;
-  bottom: 0;
+  display: none;
+
+  @media screen and (min-height: 700px) {
+
+    height: 4vh;
+    width: 99%;
+    margin: 1% auto 0.5%;
+    background-color: $darkBlue;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: $activeCell;
+      text-align: center;
+      line-height: 4vh;
+    }
+  }
 }
