@@ -156,6 +156,13 @@ $toggle.addEventListener('click', function () {
     }
 })
 
+$game.addEventListener('mousedown', function () {
+    $face.src = "./img/scared-face.svg"
+})
+$game.addEventListener('mouseup', function () {
+    $face.src = "./img/neutral-face.svg"
+})
+
 $game.addEventListener('click', function (e) {
     if (e.target.classList.contains('col')) {
         if (flag === true) {
