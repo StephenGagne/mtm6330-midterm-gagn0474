@@ -7,6 +7,8 @@ const $icons = document.getElementById('icons')
 const $counter = document.getElementById('counter')
 const $face = document.getElementById('face')
 let flag = false
+const $toggle = document.getElementById('toggle')
+
 
 const game = {
     level: 1,
@@ -17,6 +19,10 @@ const game = {
 }
 
 function newGame() {
+    //toggle flag/curosr
+    flag = false
+    $toggle.querySelector('.flag').classList.remove('toggled')
+    $toggle.querySelector('.cursor').classList.add('toggled')
     //reset game board
     $game.innerHTML = ''
     //Set the face icon back
@@ -139,7 +145,6 @@ function checkLeftRight() {
 const toReveal = []
 
 //set up cell flagging
-const $toggle = document.getElementById('toggle')
 
 $toggle.addEventListener('click', function () {
     if (flag === true) {
@@ -268,6 +273,7 @@ $hard.addEventListener('click', makeHard)
 $sbHard.addEventListener('click', makeHard)
 
 $sbRandom.addEventListener('click', function () {
+    $menu.classList.add('hidden')
     game.numOfRows = (Math.floor(Math.random() * 5) + 10)
     game.maxNumOfMines = (Math.floor(Math.random() * (game.numOfRows * 2)) + 10)
     newGame()
