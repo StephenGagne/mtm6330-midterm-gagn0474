@@ -9,7 +9,6 @@ const $face = document.getElementById('face')
 let flag = false
 const $toggle = document.getElementById('toggle')
 
-
 const game = {
     level: 1,
     numOfRows: 10,
@@ -117,7 +116,6 @@ function newGame() {
         }
         cell.classList.add('covered')
     }
-
 }
 
 function reveal(cells) {
@@ -197,7 +195,6 @@ $game.addEventListener('click', function (e) {
                         checkRow = Array.from(allRows[rowIndex - 1].querySelectorAll('.col'))
                         checkLeftRight()
                     }
-
                     reveal(toReveal)
                 }
 
