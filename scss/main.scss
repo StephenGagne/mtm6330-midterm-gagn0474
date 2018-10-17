@@ -331,16 +331,76 @@ main {
   background-repeat: no-repeat;
 }
 
+.instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid $one;
+  width: 80%;
+  background-color: transparentize($color: $inactiveCell, $amount: 0.1);
+  color: $darkBlue;
+  padding: 2%;
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+
+    img {
+      height: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 70vw;
+
+    h2 {
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 2rem;
+
+      img {
+        height: 2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+
+    h2 {
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 2rem;
+
+      img {
+        height: 2rem;
+      }
+    }
+  }
+}
+
 .hidden {
   opacity: 0;
   visibility: hidden;
 }
 
+
+
 footer {
   display: none;
 
   @media screen and (min-height: 700px) {
-
     height: 4vh;
     width: 99%;
     margin: 1% auto 0.5%;

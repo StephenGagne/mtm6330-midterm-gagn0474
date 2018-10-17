@@ -8,6 +8,7 @@ const $counter = document.getElementById('counter')
 const $face = document.getElementById('face')
 let flag = false
 const $toggle = document.getElementById('toggle')
+const $instructions = document.getElementById('instructions')
 
 const game = {
     level: 1,
@@ -235,6 +236,10 @@ const $hard = document.getElementById('hard')
 const $sbHard = document.getElementById('sb-hard')
 const $sbRandom = document.getElementById('sb-random')
 const $smile = document.getElementById('smile')
+
+window.addEventListener('click', function () {
+    $instructions.classList.add('hidden')
+})
 
 function reset() {
     $menu.classList.add('hidden')

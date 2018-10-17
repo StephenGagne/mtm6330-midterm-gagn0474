@@ -248,6 +248,44 @@ main {
   background-size: 80%;
   background-repeat: no-repeat; }
 
+.instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #1072ba;
+  width: 80%;
+  background-color: rgba(247, 242, 236, 0.9);
+  color: #233b74;
+  padding: 2%; }
+  .instructions h2 {
+    font-size: 1.5rem;
+    text-align: center; }
+  .instructions p {
+    font-size: 1rem; }
+    .instructions p img {
+      height: 1rem; }
+  @media screen and (min-width: 768px) {
+    .instructions {
+      width: 70vw; }
+      .instructions h2 {
+        font-size: 4rem;
+        text-align: center; }
+      .instructions p {
+        font-size: 2rem; }
+        .instructions p img {
+          height: 2rem; } }
+  @media screen and (min-width: 1024px) {
+    .instructions {
+      width: 50%; }
+      .instructions h2 {
+        font-size: 4rem;
+        text-align: center; }
+      .instructions p {
+        font-size: 2rem; }
+        .instructions p img {
+          height: 2rem; } }
+
 .hidden {
   opacity: 0;
   visibility: hidden; }
