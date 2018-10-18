@@ -287,7 +287,7 @@ $sbHard.addEventListener('click', makeHard)
 
 $sbRandom.addEventListener('click', function () {
     $menu.classList.add('hidden')
-    game.numOfRows = (Math.floor(Math.random() * 5) + 10)
+    game.numOfRows = (Math.floor(Math.random() * 5) + 8)
     game.maxNumOfMines = (Math.floor(Math.random() * (game.numOfRows * 2)) + 10)
     newGame()
 })
